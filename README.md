@@ -101,16 +101,3 @@ Or just open `index.html` directly — it runs entirely in the browser.
 4. Your live URL will be `https://your-username.github.io/pathfinder-visualizer`
 
 ---
-
-## What I Learned
-
-- How BFS, Dijkstra, A*, and DFS differ at the data-structure level — one word (`shift` vs `pop`) changes the entire algorithm
-- Why A* is faster than Dijkstra on grids — the Manhattan heuristic eliminates dead-end exploration
-- How to decouple algorithm computation from animation using `setTimeout` chains
-- Recursive maze generation via the division algorithm
-
----
-
-## License
-
-MIT

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pathfinder Visualizer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Pathfinder Visualizer</h1>
+    <p class="subtitle">Draw walls · place nodes · watch algorithms think</p>
+  </header>
+
+  <main>
+
+    <div class="controls">
+      <select id="algo-select">
+        <option value="bfs">BFS</option>
+        <option value="dijkstra">Dijkstra</option>
+        <option value="astar">A*</option>
+        <option value="dfs">DFS</option>
+      </select>
+
+      <select id="speed-select">
+        <option value="fast">Fast</option>
+        <option value="normal" selected>Normal</option>
+        <option value="slow">Slow</option>
+        <option value="turbo">Turbo</option>
+      </select>
+
+      <button id="btn-visualize">▶ Visualize</button>
+      <button id="btn-clear-path">✕ Clear Path</button>
+      <button id="btn-reset">↺ Reset</button>
+      <button id="btn-maze">⊞ Gen Maze</button>
+    </div>
+
+    <p id="algo-description">BFS — explores outward layer by layer · guarantees shortest path</p>
+
+    <div id="grid-container"></div>
+
+    <div id="stats-bar">
+      <span id="stat-path">Path length: —</span>
+      <span id="stat-nodes">Nodes explored: —</span>
+      <span id="stat-time">Time: —</span>
+    </div>
+
+    <div id="legend">
+      <div class="legend-item"><div class="legend-swatch start"></div><span>Start</span></div>
+      <div class="legend-item"><div class="legend-swatch end"></div><span>End</span></div>
+      <div class="legend-item"><div class="legend-swatch wall"></div><span>Wall</span></div>
+      <div class="legend-item"><div class="legend-swatch visited"></div><span>Visited</span></div>
+      <div class="legend-item"><div class="legend-swatch path"></div><span>Shortest Path</span></div>
+    </div>
+
+    <p id="message"></p>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
